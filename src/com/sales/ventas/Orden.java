@@ -10,10 +10,8 @@ public class Orden {
 
     public Orden() {
         this.idOrden = ++Orden.contadorOrdenes;
-        // inicializando arreglo con el maximo de productos
         this.productos = new Producto[Orden.MAX_PRODUCTOS];
     }
-    // Parametros: un objeto de tipo producto y
     public void agregarProducto(Producto producto){
         if(this.contadorProductos < Orden.MAX_PRODUCTOS){
             productos[contadorProductos++] = producto;
@@ -27,8 +25,6 @@ public class Orden {
         double total = 0;
         for (int i = 0; i < this.contadorProductos; i++) {
             Producto producto = this.productos[i];
-            //total += producto.getPrecio(); // total = total + producto.getPrecio()
-            // otra forma
             total += this.productos[i].getPrecio();
         }
         return total;

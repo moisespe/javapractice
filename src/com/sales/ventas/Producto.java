@@ -10,13 +10,11 @@ package com.sales.ventas;
  * @author moises
  */
 public class Producto {
-    // final no se puede modificar ( no puedes setear esta variable)
     private final int idProducto;
     private String nombre;
     private double precio;
     private static int contadorProductos;
 
-    // Agregando construtor
     private Producto(){
         this.idProducto = ++Producto.contadorProductos;
     }
